@@ -1,35 +1,29 @@
 import { motion } from "framer-motion";
 import { GlassWater } from "lucide-react";
-import receptionAsset from "@/assets/reception-area.jpg.asset.json";
-import groupClassesAsset from "@/assets/group-classes.jpg.asset.json";
-import strengthAreaAsset from "@/assets/strength-area.jpg.asset.json";
-import cardioAreaAsset from "@/assets/cardio-area.png.asset.json";
-import juiceBarAsset from "@/assets/juice-bar.png.asset.json";
-
 const facilityCategories = [
   {
     title: "STRENGTH AREA",
-    image: strengthAreaAsset.url,
+    image: "/assets/strength-area.jpg",
     alt: "Strength training area with free weights and machines at FIT NATION GYM in Nagasandra, Bengaluru",
   },
   {
     title: "CARDIO AREA",
-    image: cardioAreaAsset.url,
+    image: "/assets/cardio-area.png",
     alt: "Row of treadmills in the cardio workout area at FIT NATION GYM in Nagasandra, Bengaluru",
   },
   {
     title: "GROUP CLASSES",
-    image: groupClassesAsset.url,
+    image: "/assets/group-classes.jpg",
     alt: "Group fitness class space used for Zumba and aerobics at FIT NATION GYM in Nagasandra, Bengaluru",
   },
   {
     title: "RECEPTION",
-    image: receptionAsset.url,
+    image: "/assets/reception-area.jpg",
     alt: "Reception desk at FIT NATION GYM in Nagasandra, Bengaluru",
   },
   {
     title: "JUICE BAR",
-    image: juiceBarAsset.url,
+    image: "/assets/juice-bar.png",
     alt: "Juice bar counter with fresh fruit and green neon lighting at FIT NATION GYM in Nagasandra, Bengaluru",
   },
 ] as { title: string; image: string; alt: string }[];

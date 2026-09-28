@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { Brain, Dumbbell, HeartPulse, Mountain, Trophy } from "lucide-react";
-import zumbaAerobicsIcon from "@/assets/zumba-aerobics-icon-new.png.asset.json";
-import crossfitIcon from "@/assets/crossfit-icon-v2.png.asset.json";
+
+const zumbaAerobicsIconUrl = "/assets/zumba-aerobics-icon-new.png";
+const crossfitIconUrl = "/assets/crossfit-icon-v2.png";
 
 function PlateIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -46,13 +47,13 @@ const services: ServiceItem[] = [
     desc: "One-on-one coaching sessions tailored to your goals, form, and fitness level for faster, safer results.",
   },
   {
-    image: zumbaAerobicsIcon.url,
+    image: zumbaAerobicsIconUrl,
     imageAlt: "Zumba and aerobics class icon",
     title: "ZUMBA / AEROBICS",
     desc: "High-energy dance and rhythm-based sessions that improve coordination, stamina, and make every workout enjoyable.",
   },
   {
-    image: crossfitIcon.url,
+    image: crossfitIconUrl,
     imageAlt: "CrossFit functional training icon",
     title: "CROSSFIT",
     desc: "Functional, high-intensity training that builds real-world strength for people who want to push their limits.",

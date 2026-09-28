@@ -2,8 +2,9 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
 import { trackEvent } from "@/lib/analytics";
 import { Phone } from "lucide-react";
-import logoAsset from "@/assets/fit-nation-logo-transparent.png.asset.json";
-import wordmarkAsset from "@/assets/fit-nation-wordmark.png.asset.json";
+
+const logoUrl = "/assets/fit-nation-logo-transparent.png";
+const wordmarkUrl = "/assets/fit-nation-wordmark.png";
 
 export function Nav() {
   const { scrollY } = useScroll();
@@ -40,9 +41,9 @@ export function Nav() {
       className="fixed top-0 left-0 right-0 z-50 px-6 py-4 flex items-center justify-between border-b border-white/8 transition-colors duration-300"
     >
       <div className="flex items-center gap-2">
-        <img src={logoAsset.url} alt="FIT NATION GYM logo" className="h-8 w-auto object-contain" />
+        <img src={logoUrl} alt="FIT NATION GYM logo" className="h-8 w-auto object-contain" />
         <img
-          src={wordmarkAsset.url}
+          src={wordmarkUrl}
           alt="FIT NATION wordmark"
           className="h-5 sm:h-6 w-auto object-contain"
         />

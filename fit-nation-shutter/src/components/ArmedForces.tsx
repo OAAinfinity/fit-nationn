@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import armyIcon from "@/assets/army-icon.png.asset.json";
-import airforceIcon from "@/assets/airforce-icon.png.asset.json";
+
+const armyIconUrl = "/assets/army-icon.png";
+const airforceIconUrl = "/assets/airforce-icon.png";
 
 function ShipIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -33,7 +34,7 @@ type ForceItem = {
 
 const forces: ForceItem[] = [
   {
-    icon: armyIcon.url,
+    icon: armyIconUrl,
     iconAlt: "Indian Army emblem marking free gym access for Army personnel",
     title: "ARMY",
     desc: "Active Army personnel train free of charge as a thank you for your service to the nation.",
@@ -44,7 +45,7 @@ const forces: ForceItem[] = [
     desc: "Navy personnel get complimentary access to all gym facilities and group sessions.",
   },
   {
-    icon: airforceIcon.url,
+    icon: airforceIconUrl,
     iconAlt: "Fighter jet illustration marking free gym access for Air Force personnel",
     title: "AIRFORCE",
     desc: "Air Force personnel train free with full access to equipment, classes, and recovery zones.",

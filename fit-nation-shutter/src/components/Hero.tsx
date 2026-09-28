@@ -2,8 +2,9 @@ import { motion } from "framer-motion";
 import { Counter } from "./Counter";
 import { trackEvent } from "@/lib/analytics";
 import { ArrowRight, Star, Users, MapPin } from "lucide-react";
-import logoAsset from "@/assets/fit-nation-logo-transparent.png.asset.json";
 import { DISPLAY_REVIEW_COUNT, usePlaceReviews } from "@/hooks/useReviewCount";
+
+const logoUrl = "/assets/fit-nation-logo-transparent.png";
 
 export function Hero() {
   const headline = ["LET'S", "MAKE", "NATION", "FIT."];
@@ -14,7 +15,7 @@ export function Hero() {
     <section className="relative min-h-screen flex flex-col items-center justify-center pt-24 pb-12 px-6 overflow-hidden">
       {/* Large faded logo watermark */}
       <motion.img
-        src={logoAsset.url}
+        src={logoUrl}
         alt=""
         aria-hidden="true"
         draggable={false}

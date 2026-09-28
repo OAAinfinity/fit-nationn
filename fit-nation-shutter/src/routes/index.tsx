@@ -12,10 +12,10 @@ import { WhatsAppButton } from "../components/WhatsAppButton";
 import { Phone } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 import { createFileRoute } from "@tanstack/react-router";
-import shareImage from "@/assets/fit-nation-share.jpg.asset.json";
 
 const SITE_ORIGIN = "https://fit-nation-shutter.lovable.app";
 const SITE_URL = `${SITE_ORIGIN}/`;
+const shareImageUrl = "/assets/fit-nation-share.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -35,7 +35,7 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: SITE_URL },
-      { property: "og:image", content: `${SITE_ORIGIN}${shareImage.url}` },
+      { property: "og:image", content: `${SITE_ORIGIN}${shareImageUrl}` },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "FIT NATION GYM | Gym in Nagasandra, Bengaluru" },
       {
@@ -43,7 +43,7 @@ export const Route = createFileRoute("/")({
         content:
           "Strength training, cardio, Zumba and group classes with real coaching at FIT NATION GYM, HMT Layout, Nagasandra, Bengaluru.",
       },
-      { name: "twitter:image", content: `${SITE_ORIGIN}${shareImage.url}` },
+      { name: "twitter:image", content: `${SITE_ORIGIN}${shareImageUrl}` },
     ],
     links: [{ rel: "canonical", href: SITE_URL }],
     scripts: [
@@ -56,7 +56,7 @@ export const Route = createFileRoute("/")({
           description:
             "Fitness centre in Nagasandra, Bengaluru offering strength training, cardio, group fitness classes, Zumba, CrossFit and personal coaching.",
           url: SITE_URL,
-          image: `${SITE_ORIGIN}${shareImage.url}`,
+          image: `${SITE_ORIGIN}${shareImageUrl}`,
           telephone: "+91-9632795977",
           address: {
             "@type": "PostalAddress",
