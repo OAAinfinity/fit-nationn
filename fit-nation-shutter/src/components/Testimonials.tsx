@@ -10,9 +10,15 @@ const fallbackTestimonials = [
   { text: "Offers the best experience for a very reasonable price.", author: "Google Review" },
 ];
 
+type Testimonial = (typeof fallbackTestimonials)[number] & {
+  rating?: number;
+  authorUri?: string | null;
+  publishedAt?: string | null;
+};
+
 export function Testimonials() {
   const { data } = usePlaceReviews();
-  const testimonials = data?.reviews.length ? data.reviews : fallbackTestimonials;
+  const testimonials: Testimonial[] = data?.reviews.length ? data.reviews : fallbackTestimonials;
 
   return (
     <section className="py-24 px-6 bg-brand-darker">

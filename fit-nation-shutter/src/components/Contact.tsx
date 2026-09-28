@@ -11,6 +11,8 @@ const SUBMIT_COOLDOWN_MS = 15_000;
 /** Strip control characters and collapse whitespace; cap length. */
 function clean(value: string, max: number) {
   return value
+    // Remove ASCII and C1 control characters before forwarding form content.
+    // eslint-disable-next-line no-control-regex
     .replace(/[\u0000-\u001f\u007f-\u009f]/g, " ")
     .replace(/[ \t]{2,}/g, " ")
     .trim()
