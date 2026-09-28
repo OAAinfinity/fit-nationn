@@ -1,0 +1,5 @@
+node_modules
+.vercel
+fit-nation-shutter/node_modules
+fit-nation-shutter/.output
+fit-nation-shutter/.vinxi

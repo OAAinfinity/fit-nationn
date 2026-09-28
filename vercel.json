@@ -1,0 +1,5 @@
+{
+  "buildCommand": "npm run build",
+  "installCommand": "cd fit-nation-shutter && npm ci",
+  "framework": null
+}
