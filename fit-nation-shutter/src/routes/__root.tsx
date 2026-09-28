@@ -78,11 +78,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "FIT NATION GYM | Gym in Nagasandra, Bengaluru" },
-      { name: "description", content: "FIT NATION GYM in Nagasandra, Bengaluru offers strength training, cardio, group classes and personal coaching." },
+      {
+        name: "description",
+        content:
+          "FIT NATION GYM in Nagasandra, Bengaluru offers strength training, cardio, group classes and personal coaching.",
+      },
       { name: "author", content: "FIT NATION GYM" },
       { property: "og:title", content: "FIT NATION GYM | Gym in Nagasandra, Bengaluru" },
       { property: "og:site_name", content: "FIT NATION GYM" },
-      { property: "og:description", content: "Strength training, cardio, group fitness classes and personal coaching in Nagasandra, Bengaluru." },
+      {
+        property: "og:description",
+        content:
+          "Strength training, cardio, group fitness classes and personal coaching in Nagasandra, Bengaluru.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

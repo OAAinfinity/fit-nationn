@@ -4,7 +4,15 @@ import airforceIcon from "@/assets/airforce-icon.png.asset.json";
 
 function ShipIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <svg
+      viewBox="0 0 64 64"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
       <path d="M8 48h48l-8-24H16L8 48z" />
       <path d="M20 24V12h24v12" />
       <path d="M24 12V8h16v4" />

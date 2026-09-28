@@ -2,30 +2,30 @@ import { motion } from "framer-motion";
 import { CheckCircle2, ShieldCheck, Gem, Users, Ban } from "lucide-react";
 
 const reasons = [
-  { 
-    icon: ShieldCheck, 
-    title: "Certified, Experienced Trainers", 
-    desc: "Not just staff who show you the machines, but real coaches invested in your journey." 
+  {
+    icon: ShieldCheck,
+    title: "Certified, Experienced Trainers",
+    desc: "Not just staff who show you the machines, but real coaches invested in your journey.",
   },
-  { 
-    icon: CheckCircle2, 
-    title: "Clean, Well-Maintained Facility", 
-    desc: "Good flooring, good lighting, and equipment kept in perfect order every single day." 
+  {
+    icon: CheckCircle2,
+    title: "Clean, Well-Maintained Facility",
+    desc: "Good flooring, good lighting, and equipment kept in perfect order every single day.",
   },
-  { 
-    icon: Gem, 
-    title: "Real Value for Money", 
-    desc: "A premium fitness experience without the premium price tag." 
+  {
+    icon: Gem,
+    title: "Real Value for Money",
+    desc: "A premium fitness experience without the premium price tag.",
   },
-  { 
-    icon: Users, 
-    title: "A Gym That Feels Like Family", 
-    desc: "Members genuinely stick around because it feels like a home, not a transaction." 
+  {
+    icon: Users,
+    title: "A Gym That Feels Like Family",
+    desc: "Members genuinely stick around because it feels like a home, not a transaction.",
   },
-  { 
-    icon: Ban, 
-    title: "100% Drug Free Gym", 
-    desc: "No shortcuts, no steroids, no anabolics, no enhancements." 
+  {
+    icon: Ban,
+    title: "100% Drug Free Gym",
+    desc: "No shortcuts, no steroids, no anabolics, no enhancements.",
   },
 ];
 

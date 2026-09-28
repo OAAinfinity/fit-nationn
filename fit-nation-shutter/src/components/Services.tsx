@@ -1,11 +1,5 @@
 import { motion } from "framer-motion";
-import {
-  Brain,
-  Dumbbell,
-  HeartPulse,
-  Mountain,
-  Trophy,
-} from "lucide-react";
+import { Brain, Dumbbell, HeartPulse, Mountain, Trophy } from "lucide-react";
 import zumbaAerobicsIcon from "@/assets/zumba-aerobics-icon-new.png.asset.json";
 import crossfitIcon from "@/assets/crossfit-icon-v2.png.asset.json";
 
@@ -46,14 +40,48 @@ type ServiceItem = {
 };
 
 const services: ServiceItem[] = [
-  { icon: Dumbbell, title: "PERSONAL TRAINING", desc: "One-on-one coaching sessions tailored to your goals, form, and fitness level for faster, safer results." },
-  { image: zumbaAerobicsIcon.url, imageAlt: "Zumba and aerobics class icon", title: "ZUMBA / AEROBICS", desc: "High-energy dance and rhythm-based sessions that improve coordination, stamina, and make every workout enjoyable." },
-  { image: crossfitIcon.url, imageAlt: "CrossFit functional training icon", title: "CROSSFIT", desc: "Functional, high-intensity training that builds real-world strength for people who want to push their limits." },
-  { icon: HeartPulse, title: "CARDIO", desc: "Heart-pumping workouts that improve stamina, support heart health, and help you stay active with confidence." },
-  { icon: Brain, title: "STRETCHING & MEDITATION", desc: "Guided flexibility and mindfulness sessions to help your body recover and your mind reset." },
-  { icon: Mountain, title: "TREKKING", desc: "Guided uphill adventures that build endurance, strengthen your legs, and bring fitness into the outdoors." },
-  { icon: PlateIcon, title: "WEEKLY MEALS", desc: "Every Wednesday, enjoy complimentary bananas and eggs at the gym to support your nutrition and training." },
-  { icon: Trophy, title: "CHALLENGES", desc: "Monthly fitness competitions and team challenges that keep you motivated, accountable, and progressing." },
+  {
+    icon: Dumbbell,
+    title: "PERSONAL TRAINING",
+    desc: "One-on-one coaching sessions tailored to your goals, form, and fitness level for faster, safer results.",
+  },
+  {
+    image: zumbaAerobicsIcon.url,
+    imageAlt: "Zumba and aerobics class icon",
+    title: "ZUMBA / AEROBICS",
+    desc: "High-energy dance and rhythm-based sessions that improve coordination, stamina, and make every workout enjoyable.",
+  },
+  {
+    image: crossfitIcon.url,
+    imageAlt: "CrossFit functional training icon",
+    title: "CROSSFIT",
+    desc: "Functional, high-intensity training that builds real-world strength for people who want to push their limits.",
+  },
+  {
+    icon: HeartPulse,
+    title: "CARDIO",
+    desc: "Heart-pumping workouts that improve stamina, support heart health, and help you stay active with confidence.",
+  },
+  {
+    icon: Brain,
+    title: "STRETCHING & MEDITATION",
+    desc: "Guided flexibility and mindfulness sessions to help your body recover and your mind reset.",
+  },
+  {
+    icon: Mountain,
+    title: "TREKKING",
+    desc: "Guided uphill adventures that build endurance, strengthen your legs, and bring fitness into the outdoors.",
+  },
+  {
+    icon: PlateIcon,
+    title: "WEEKLY MEALS",
+    desc: "Every Wednesday, enjoy complimentary bananas and eggs at the gym to support your nutrition and training.",
+  },
+  {
+    icon: Trophy,
+    title: "CHALLENGES",
+    desc: "Monthly fitness competitions and team challenges that keep you motivated, accountable, and progressing.",
+  },
 ];
 
 export function Services() {

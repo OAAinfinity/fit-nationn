@@ -40,39 +40,40 @@ export function Gallery() {
       <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">COSMOS OF 5000 SQ FT</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
         {facilityCategories.map((item, i) => {
-          const isLastOdd = i === facilityCategories.length - 1 && facilityCategories.length % 2 === 1;
+          const isLastOdd =
+            i === facilityCategories.length - 1 && facilityCategories.length % 2 === 1;
           return (
-          <motion.div
-            key={i}
-            className={`relative aspect-square glass overflow-hidden flex flex-col items-center p-8 border-white/5 ring-1 ring-inset ring-primary/10 ${
-              isLastOdd ? "md:col-span-2 md:w-[calc(50%-0.75rem)] md:justify-self-center" : ""
-            }`}
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.08 }}
-          >
-            {item.image ? (
-              <img
-                src={item.image}
-                alt={item.alt}
-                loading="lazy"
-                decoding="async"
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-            ) : (
-              <div
-                aria-hidden="true"
-                className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-secondary to-background"
-              >
-                <GlassWater className="w-16 h-16 text-primary/40" strokeWidth={1.25} />
-              </div>
-            )}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/20" />
-            <p className="relative z-10 mt-auto text-xs tracking-widest text-foreground uppercase">
-              {item.title}
-            </p>
-          </motion.div>
+            <motion.div
+              key={i}
+              className={`relative aspect-square glass overflow-hidden flex flex-col items-center p-8 border-white/5 ring-1 ring-inset ring-primary/10 ${
+                isLastOdd ? "md:col-span-2 md:w-[calc(50%-0.75rem)] md:justify-self-center" : ""
+              }`}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.08 }}
+            >
+              {item.image ? (
+                <img
+                  src={item.image}
+                  alt={item.alt}
+                  loading="lazy"
+                  decoding="async"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              ) : (
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-secondary to-background"
+                >
+                  <GlassWater className="w-16 h-16 text-primary/40" strokeWidth={1.25} />
+                </div>
+              )}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/20" />
+              <p className="relative z-10 mt-auto text-xs tracking-widest text-foreground uppercase">
+                {item.title}
+              </p>
+            </motion.div>
           );
         })}
       </div>
