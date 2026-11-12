@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useServerFn } from "@tanstack/react-start";
 import { getPlaceReviewStats } from "@/lib/place-reviews.functions";
 
-export const DISPLAY_REVIEW_COUNT = 36;
+export const DISPLAY_REVIEW_COUNT = 50;
 
 /** Live Google review count for FIT NATION GYM, cached ~1 hour. */
 export function useReviewCount() {
