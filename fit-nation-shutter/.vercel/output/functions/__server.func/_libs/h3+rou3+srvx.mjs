@@ -1,11 +1,10 @@
 import { PassThrough, Readable } from "node:stream";
-//#region node_modules/h3/node_modules/rou3/dist/index.mjs
+// node_modules/h3/node_modules/rou3/dist/index.mjs
 var NullProtoObj = /* @__PURE__ */ (() => {
 	const e = function() {};
 	return e.prototype = Object.create(null), Object.freeze(e.prototype), e;
 })();
-//#endregion
-//#region node_modules/h3/node_modules/srvx/dist/_chunks/_url.mjs
+// node_modules/h3/node_modules/srvx/dist/_chunks/_url.mjs
 function lazyInherit(target, source, sourceKey) {
 	for (const key of [...Object.getOwnPropertyNames(source), ...Object.getOwnPropertySymbols(source)]) {
 		if (key === "constructor") continue;
@@ -183,8 +182,7 @@ var FastURL = /* @__PURE__ */ (() => {
 	Object.setPrototypeOf(FastURL, NativeURL);
 	return FastURL;
 })();
-//#endregion
-//#region node_modules/h3/node_modules/srvx/dist/adapters/node.mjs
+// node_modules/h3/node_modules/srvx/dist/adapters/node.mjs
 var NodeResponse = /* @__PURE__ */ (() => {
 	const NativeResponse = globalThis.Response;
 	class NodeResponse {
@@ -309,8 +307,7 @@ var NodeResponse = /* @__PURE__ */ (() => {
 	Object.setPrototypeOf(NodeResponse.prototype, NativeResponse.prototype);
 	return NodeResponse;
 })();
-//#endregion
-//#region node_modules/h3/dist/response.mjs
+// node_modules/h3/dist/response.mjs
 var NEEDLESS_ESCAPE_SRC = String.raw`%(?:2[146-9A-E]|3[0-9ABD]|4[0-9A-F]|5[0-9ABDF]|6[1-9A-F]|7[0-9ACE])`;
 var NEEDLESS_ESCAPE_RE = /* @__PURE__ */ new RegExp(NEEDLESS_ESCAPE_SRC, "i");
 var NEEDLESS_ESCAPE_RE_G = /* @__PURE__ */ new RegExp(NEEDLESS_ESCAPE_SRC, "gi");
@@ -635,8 +632,7 @@ function errorResponse(error, debug, errHeaders) {
 		headers
 	});
 }
-//#endregion
-//#region node_modules/h3/dist/middleware.mjs
+// node_modules/h3/dist/middleware.mjs
 function composeMiddleware(middleware) {
 	let chain = (event, handler) => handler(event);
 	for (let i = middleware.length - 1; i >= 0; i--) {
@@ -670,8 +666,7 @@ function callLayer(fn, event, handler, inner) {
 function isUnhandledResponse(val) {
 	return val === void 0 || val === kNotFound;
 }
-//#endregion
-//#region node_modules/h3/dist/cache.mjs
+// node_modules/h3/dist/cache.mjs
 function toRequest(input, options) {
 	if (typeof input === "string") {
 		let url = input;
@@ -785,5 +780,4 @@ function routeHandler(route) {
 	if (!data) return NoHandler;
 	return data.middleware?.length ? data["~composed"] ??= composeHandler(data.middleware, data.handler) : data.handler;
 }
-//#endregion
 export { HTTPError as i, defineLazyEventHandler as n, toRequest as r, H3Core as t };

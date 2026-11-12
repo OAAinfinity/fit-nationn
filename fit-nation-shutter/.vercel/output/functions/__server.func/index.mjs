@@ -1,7 +1,7 @@
 globalThis.__nitro_main__ = import.meta.url;
 import { i as HTTPError, n as defineLazyEventHandler, t as H3Core } from "./_libs/h3+rou3+srvx.mjs";
-import { r as NodeResponse } from "./_libs/h3-v2+rou3+srvx.mjs";
-//#region #nitro-vite-setup
+import { t as NodeResponse } from "./_libs/srvx.mjs";
+// #nitro-vite-setup
 function lazyService(loader) {
 	let promise, mod;
 	return { fetch(req) {
@@ -12,13 +12,11 @@ function lazyService(loader) {
 }
 var services = { ["ssr"]: lazyService(() => import("./_ssr/ssr.mjs")) };
 globalThis.__nitro_vite_envs__ = services;
-//#endregion
-//#region node_modules/nitro/dist/runtime/internal/route-rules.mjs
+// node_modules/nitro/dist/runtime/internal/route-rules.mjs
 var headers = ((m) => function headersRouteRule(event) {
 	for (const [key, value] of Object.entries(m.options || {})) event.res.headers.set(key, value);
 });
-//#endregion
-//#region #nitro/virtual/routing
+// #nitro/virtual/routing
 var findRouteRules = /* @__PURE__ */ (() => {
 	const $0 = [{
 		name: "headers",
@@ -53,8 +51,7 @@ var findRoute = /* @__PURE__ */ (() => {
 	});
 })();
 [].filter(Boolean);
-//#endregion
-//#region node_modules/nitro/dist/runtime/internal/error/prod.mjs
+// node_modules/nitro/dist/runtime/internal/error/prod.mjs
 var errorHandler = (error, event) => {
 	const res = defaultHandler(error, event);
 	return new NodeResponse(typeof res.body === "string" ? res.body : JSON.stringify(res.body, null, 2), res);
@@ -89,8 +86,7 @@ function defaultHandler(error, event) {
 		}
 	};
 }
-//#endregion
-//#region #nitro/virtual/error-handler
+// #nitro/virtual/error-handler
 var errorHandlers = [errorHandler];
 async function error_handler_default(error, event) {
 	for (const handler of errorHandlers) try {
@@ -100,8 +96,7 @@ async function error_handler_default(error, event) {
 		console.error(error);
 	}
 }
-//#endregion
-//#region #nitro/virtual/app
+// #nitro/virtual/app
 function createNitroApp() {
 	const captureError = (error, errorCtx) => {
 		if (errorCtx?.event) {
@@ -142,8 +137,7 @@ function createH3App(config) {
 	};
 	return h3App;
 }
-//#endregion
-//#region node_modules/nitro/dist/runtime/internal/app.mjs
+// node_modules/nitro/dist/runtime/internal/app.mjs
 var APP_ID = "default";
 function useNitroApp() {
 	let instance = useNitroApp._instance;
@@ -190,8 +184,7 @@ function getRouteRules(method, pathname) {
 		routeRuleMiddleware: middleware
 	};
 }
-//#endregion
-//#region node_modules/nitro/dist/presets/vercel/runtime/isr.mjs
+// node_modules/nitro/dist/presets/vercel/runtime/isr.mjs
 var ISR_URL_PARAM = "__isr_route";
 function isrRouteRewrite(reqUrl, xNowRouteMatches) {
 	if (xNowRouteMatches) {
@@ -209,8 +202,7 @@ function isrRouteRewrite(reqUrl, xNowRouteMatches) {
 		}
 	}
 }
-//#endregion
-//#region node_modules/nitro/dist/presets/vercel/runtime/vercel.web.mjs
+// node_modules/nitro/dist/presets/vercel/runtime/vercel.web.mjs
 var nitroApp = useNitroApp();
 var vercel_web_default = { fetch(req, context) {
 	const isrURL = isrRouteRewrite(req.url, req.headers.get("x-now-route-matches"));
@@ -228,5 +220,4 @@ var vercel_web_default = { fetch(req, context) {
 	req.waitUntil = context?.waitUntil;
 	return nitroApp.fetch(req);
 } };
-//#endregion
 export { vercel_web_default as default };

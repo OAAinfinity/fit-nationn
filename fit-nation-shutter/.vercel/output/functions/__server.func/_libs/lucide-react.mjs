@@ -1,6 +1,6 @@
 import { o as __toESM } from "../_runtime.mjs";
 import { i as require_react } from "./react+tanstack__react-query.mjs";
-//#region node_modules/lucide-react/dist/esm/shared/src/utils/mergeClasses.js
+// node_modules/lucide-react/dist/esm/shared/src/utils/mergeClasses.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 /**
 * @license lucide-react v0.575.0 - ISC
@@ -11,8 +11,7 @@ var import_react = /* @__PURE__ */ __toESM(require_react());
 var mergeClasses = (...classes) => classes.filter((className, index, array) => {
 	return Boolean(className) && className.trim() !== "" && array.indexOf(className) === index;
 }).join(" ").trim();
-//#endregion
-//#region node_modules/lucide-react/dist/esm/shared/src/utils/toKebabCase.js
+// node_modules/lucide-react/dist/esm/shared/src/utils/toKebabCase.js
 /**
 * @license lucide-react v0.575.0 - ISC
 *
@@ -20,8 +19,7 @@ var mergeClasses = (...classes) => classes.filter((className, index, array) => {
 * See the LICENSE file in the root directory of this source tree.
 */
 var toKebabCase = (string) => string.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase();
-//#endregion
-//#region node_modules/lucide-react/dist/esm/shared/src/utils/toCamelCase.js
+// node_modules/lucide-react/dist/esm/shared/src/utils/toCamelCase.js
 /**
 * @license lucide-react v0.575.0 - ISC
 *
@@ -29,8 +27,7 @@ var toKebabCase = (string) => string.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLo
 * See the LICENSE file in the root directory of this source tree.
 */
 var toCamelCase = (string) => string.replace(/^([A-Z])|[\s-_]+(\w)/g, (match, p1, p2) => p2 ? p2.toUpperCase() : p1.toLowerCase());
-//#endregion
-//#region node_modules/lucide-react/dist/esm/shared/src/utils/toPascalCase.js
+// node_modules/lucide-react/dist/esm/shared/src/utils/toPascalCase.js
 /**
 * @license lucide-react v0.575.0 - ISC
 *
@@ -41,8 +38,7 @@ var toPascalCase = (string) => {
 	const camelCase = toCamelCase(string);
 	return camelCase.charAt(0).toUpperCase() + camelCase.slice(1);
 };
-//#endregion
-//#region node_modules/lucide-react/dist/esm/defaultAttributes.js
+// node_modules/lucide-react/dist/esm/defaultAttributes.js
 /**
 * @license lucide-react v0.575.0 - ISC
 *
@@ -60,8 +56,7 @@ var defaultAttributes = {
 	strokeLinecap: "round",
 	strokeLinejoin: "round"
 };
-//#endregion
-//#region node_modules/lucide-react/dist/esm/shared/src/utils/hasA11yProp.js
+// node_modules/lucide-react/dist/esm/shared/src/utils/hasA11yProp.js
 /**
 * @license lucide-react v0.575.0 - ISC
 *
@@ -72,8 +67,7 @@ var hasA11yProp = (props) => {
 	for (const prop in props) if (prop.startsWith("aria-") || prop === "role" || prop === "title") return true;
 	return false;
 };
-//#endregion
-//#region node_modules/lucide-react/dist/esm/Icon.js
+// node_modules/lucide-react/dist/esm/Icon.js
 /**
 * @license lucide-react v0.575.0 - ISC
 *
@@ -91,8 +85,7 @@ var Icon = (0, import_react.forwardRef)(({ color = "currentColor", size = 24, st
 	...!children && !hasA11yProp(rest) && { "aria-hidden": "true" },
 	...rest
 }, [...iconNode.map(([tag, attrs]) => (0, import_react.createElement)(tag, attrs)), ...Array.isArray(children) ? children : [children]]));
-//#endregion
-//#region node_modules/lucide-react/dist/esm/createLucideIcon.js
+// node_modules/lucide-react/dist/esm/createLucideIcon.js
 /**
 * @license lucide-react v0.575.0 - ISC
 *
@@ -407,5 +400,4 @@ var Users = createLucideIcon("users", [
 		key: "nufk8"
 	}]
 ]);
-//#endregion
 export { ArrowRight as _, Phone as a, LoaderCircle as c, Gem as d, Dumbbell as f, Ban as g, Brain as h, ShieldCheck as i, HeartPulse as l, CircleCheck as m, Trophy as n, Mountain as o, Clock as p, Star as r, MapPin as s, Users as t, GlassWater as u };

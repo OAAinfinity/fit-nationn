@@ -1,4 +1,4 @@
-//#region node_modules/@tanstack/query-core/build/modern/timeoutManager.js
+// node_modules/@tanstack/query-core/build/modern/timeoutManager.js
 var defaultTimeoutProvider = {
 	setTimeout: (callback, delay) => setTimeout(callback, delay),
 	clearTimeout: (timeoutId) => clearTimeout(timeoutId),
@@ -145,8 +145,7 @@ var timeoutManager = new TimeoutManager();
 function systemSetTimeoutZero(callback) {
 	setTimeout(callback, 0);
 }
-//#endregion
-//#region node_modules/@tanstack/query-core/build/modern/utils.js
+// node_modules/@tanstack/query-core/build/modern/utils.js
 /** @deprecated
 * use `environmentManager.isServer()` instead.
 */
@@ -382,15 +381,13 @@ function addConsumeAwareSignal(object, getSignal, onCancelled) {
 	});
 	return object;
 }
-//#endregion
-//#region node_modules/@tanstack/query-core/build/modern/environmentManager.js
+// node_modules/@tanstack/query-core/build/modern/environmentManager.js
 var isServerFn = () => isServer$1;
 /**
 * Returns whether the current runtime should be treated as a server environment.
 */
 var isServer = () => isServerFn();
-//#endregion
-//#region node_modules/@tanstack/query-core/build/modern/subscribable.js
+// node_modules/@tanstack/query-core/build/modern/subscribable.js
 /**
 * The base class behind everything in Query that you can subscribe to: `QueryCache`, `MutationCache`,
 * the observers, and the `FocusManager`/`OnlineManager` behind `focusManager` and `onlineManager`.
@@ -432,8 +429,7 @@ var Subscribable = class {
 	onSubscribe() {}
 	onUnsubscribe() {}
 };
-//#endregion
-//#region node_modules/@tanstack/query-core/build/modern/focusManager.js
+// node_modules/@tanstack/query-core/build/modern/focusManager.js
 /**
 * The `FocusManager` manages the focus state within TanStack Query.
 *
@@ -542,8 +538,7 @@ var FocusManager = class extends Subscribable {
 * Singleton instance of {@link FocusManager}, used to manage and observe the focus state within TanStack Query.
 */
 var focusManager = new FocusManager();
-//#endregion
-//#region node_modules/@tanstack/query-core/build/modern/notifyManager.js
+// node_modules/@tanstack/query-core/build/modern/notifyManager.js
 /**
 * Default scheduling function used by the notify manager.
 * Schedules the callback with the system's `setTimeout(callback, 0)`.
@@ -659,8 +654,7 @@ function createNotifyManager() {
 * Handles scheduling and batching callbacks in TanStack Query.
 */
 var notifyManager = createNotifyManager();
-//#endregion
-//#region node_modules/@tanstack/query-core/build/modern/onlineManager.js
+// node_modules/@tanstack/query-core/build/modern/onlineManager.js
 /**
 * The `OnlineManager` manages the online state within TanStack Query. It can
 * be used to change the default event listeners or to manually change the
@@ -754,8 +748,7 @@ var OnlineManager = class extends Subscribable {
 * Singleton instance of {@link OnlineManager}, used to manage and observe the online state within TanStack Query.
 */
 var onlineManager = new OnlineManager();
-//#endregion
-//#region node_modules/@tanstack/query-core/build/modern/retryer.js
+// node_modules/@tanstack/query-core/build/modern/retryer.js
 function defaultRetryDelay(failureCount) {
 	return Math.min(1e3 * 2 ** failureCount, 3e4);
 }
@@ -887,8 +880,7 @@ function createRetryer(config) {
 		}
 	};
 }
-//#endregion
-//#region node_modules/@tanstack/query-core/build/modern/removable.js
+// node_modules/@tanstack/query-core/build/modern/removable.js
 /**
 * The base class for cache entries that are garbage collected once nothing is using them —
 * `Query` and `Mutation` both extend it. `gcTime` controls how long an unused entry is kept.
@@ -919,8 +911,7 @@ var Removable = class {
 		}
 	}
 };
-//#endregion
-//#region node_modules/@tanstack/query-core/build/modern/infiniteQueryBehavior.js
+// node_modules/@tanstack/query-core/build/modern/infiniteQueryBehavior.js
 function infiniteQueryBehavior(pages) {
 	return { onFetch: (context, query) => {
 		const options = context.options;
@@ -998,8 +989,7 @@ function getNextPageParam(options, { pages, pageParams }) {
 function getPreviousPageParam(options, { pages, pageParams }) {
 	return pages.length > 0 ? options.getPreviousPageParam?.(pages[0], pages, pageParams[0], pageParams) : void 0;
 }
-//#endregion
-//#region node_modules/@tanstack/query-core/build/modern/query.js
+// node_modules/@tanstack/query-core/build/modern/query.js
 /**
 * Represents a single cached query. A `Query` holds the query's key, options,
 * state (data/error/status), and the observers currently subscribed to it.
@@ -1512,8 +1502,7 @@ function getDefaultState$1(options) {
 		fetchStatus: "idle"
 	};
 }
-//#endregion
-//#region node_modules/@tanstack/query-core/build/modern/queryObserver.js
+// node_modules/@tanstack/query-core/build/modern/queryObserver.js
 /**
 * A `QueryObserver` watches a single query in the `QueryCache` and computes a
 * `QueryObserverResult` from its state, recomputing and notifying subscribers
@@ -1955,8 +1944,7 @@ function shouldFetchOptionally(query, prevQuery, options, prevOptions) {
 function isStale(query, options) {
 	return resolveQueryValue(options.enabled, query) !== false && query.isStaleByTime(resolveQueryValue(options.staleTime, query));
 }
-//#endregion
-//#region node_modules/@tanstack/query-core/build/modern/mutation.js
+// node_modules/@tanstack/query-core/build/modern/mutation.js
 /**
 * Represents a single mutation attempt. A `Mutation` holds the mutation's
 * options, state (data/error/status), and the `MutationObserver`s currently
@@ -2246,8 +2234,7 @@ function getDefaultState() {
 		submittedAt: 0
 	};
 }
-//#endregion
-//#region node_modules/@tanstack/query-core/build/modern/mutationCache.js
+// node_modules/@tanstack/query-core/build/modern/mutationCache.js
 /**
 * The `MutationCache` is the storage for mutations.
 *
@@ -2427,8 +2414,7 @@ var MutationCache = class extends Subscribable {
 function scopeFor(mutation) {
 	return mutation.options.scope?.id;
 }
-//#endregion
-//#region node_modules/@tanstack/query-core/build/modern/queryCache.js
+// node_modules/@tanstack/query-core/build/modern/queryCache.js
 /**
 * The `QueryCache` is the storage mechanism for TanStack Query. It stores all the data, meta
 * information, and state of the queries it contains.
@@ -2638,8 +2624,7 @@ var QueryCache = class extends Subscribable {
 		});
 	}
 };
-//#endregion
-//#region node_modules/@tanstack/query-core/build/modern/queryClient.js
+// node_modules/@tanstack/query-core/build/modern/queryClient.js
 /**
 * `QueryClient` is used to interact with a cache of queries and mutations. It owns a
 * `QueryCache` and a `MutationCache` (creating default ones if none are passed in) and holds
@@ -3282,5 +3267,4 @@ var QueryClient = class {
 		this.#mutationCache.clear();
 	}
 };
-//#endregion
 export { shouldThrowError as a, noop as i, QueryObserver as n, notifyManager as r, QueryClient as t };
